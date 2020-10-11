@@ -85,5 +85,29 @@ class Zad3 {
         console.log(str);
     }
 }
-const runZad3 = new Zad3();
-runZad3.drawTable();
+// const runZad3 = new Zad3();
+// runZad3.drawTable();
+
+class Zad4 {
+    constructor(){
+
+    }
+
+    randomNumbers(){
+        let j = 0;
+        let counter = 0;
+        for (let i=0; i<=10; i++){
+            let randomNumber = Math.floor(Math.random()*(10-1+1)+1);
+             if (randomNumber >= 5){
+                 counter++
+             }             
+        }
+        if (counter > 5){
+            console.log('Udało się');
+        } else {
+            console.log('Niestety nie tym razem')
+        }
+    }
+}
+// const runZad4 = new Zad4();
+// runZad4.randomNumbers();
