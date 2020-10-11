@@ -111,3 +111,27 @@ class Zad4 {
 }
 // const runZad4 = new Zad4();
 // runZad4.randomNumbers();
+
+class Zad5 {
+    constructor(n){
+        this.n = n;
+    }
+    drawDash(counter) {
+        let dashRow = '';
+        for(let i=1; i<=counter; i++){
+            dashRow += '-';
+        }
+        return dashRow;
+    }
+
+    drawRowWithNumbersAndDashes(){
+        let string = '';
+        for (let j=0; j<=this.n; j++){
+            string += String(j) + this.drawDash(j);
+        }
+        return console.log(string)
+    }
+}
+
+const runZad5 = new Zad5(7);
+runZad5.drawRowWithNumbersAndDashes();
