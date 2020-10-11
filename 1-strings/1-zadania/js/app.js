@@ -118,3 +118,30 @@ class Zadanie5 {
 
 // const runZadanie5 = new Zadanie5(4);
 // runZadanie5.throwFewRandomNumbers(10)
+
+class Zadanie6 {
+    constructor(idLength){
+        this.idLength = idLength;
+    }
+
+    randomNumber(max, min) {
+        const number = Math.floor(Math.random()*(max-min+1)+min);
+        return number
+    }
+
+    buildUniqId() {
+        let uniqId = '';
+        for(let i=0; i<this.idLength; i++){
+            if(this.randomNumber(10000000, 1)% 2 === 0){
+                uniqId += String.fromCharCode(this.randomNumber(57,48));
+            } else if(this.randomNumber(10000000, 1)% 3 === 0){
+                uniqId += String.fromCharCode(this.randomNumber(90,65));
+            }else {
+                uniqId += String.fromCharCode(this.randomNumber(122,97));
+            }
+        }
+        return console.log(uniqId);
+    }
+}
+const runZadanie6 = new Zadanie6(20);
+runZadanie6.buildUniqId();
