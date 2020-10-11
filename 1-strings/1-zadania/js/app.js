@@ -143,5 +143,18 @@ class Zadanie6 {
         return console.log(uniqId);
     }
 }
-const runZadanie6 = new Zadanie6(20);
-runZadanie6.buildUniqId();
+// const runZadanie6 = new Zadanie6(20);
+// runZadanie6.buildUniqId();
+
+class Zadanie7 {
+    constructor(x){
+        this.x = x;
+    }
+
+    powerOfX() {
+        const xx = this.x * this.x ;
+        return console.log(`Liczba ${this.x} * ${this.x} da w wyniku ${xx}`);
+    }
+}
+const runZadanie7 = new Zadanie7(2);
+runZadanie7.powerOfX();
